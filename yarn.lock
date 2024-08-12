@@ -2204,8 +2204,8 @@ __metadata:
     eslint-config-next: ^14.0.4
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
-    maci-crypto: 0.0.0-ci.e7aa4dd
-    maci-domainobjs: 0.0.0-ci.e7aa4dd
+    maci-crypto: 2.0.0
+    maci-domainobjs: 2.0.0
     next: ^14.0.4
     next-themes: ^0.2.1
     nprogress: ^0.2.0
@@ -8133,21 +8133,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethers@npm:^6.13.1":
-  version: 6.13.1
-  resolution: "ethers@npm:6.13.1"
-  dependencies:
-    "@adraffy/ens-normalize": 1.10.1
-    "@noble/curves": 1.2.0
-    "@noble/hashes": 1.3.2
-    "@types/node": 18.15.13
-    aes-js: 4.0.0-beta.5
-    tslib: 2.4.0
-    ws: 8.17.1
-  checksum: beef4b6d117f64c369f44be631e0f666b966374eac0cc0446fa7abe114b11d6b3019060022eec65c031f150711f4913d249de507ff3da3204e654635db80a07e
-  languageName: node
-  linkType: hard
-
 "ethers@npm:^6.13.2":
   version: 6.13.2
   resolution: "ethers@npm:6.13.2"
@@ -11439,18 +11424,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maci-crypto@npm:0.0.0-ci.e7aa4dd":
-  version: 0.0.0-ci.e7aa4dd
-  resolution: "maci-crypto@npm:0.0.0-ci.e7aa4dd"
-  dependencies:
-    "@zk-kit/baby-jubjub": ^1.0.1
-    "@zk-kit/eddsa-poseidon": ^1.0.2
-    "@zk-kit/poseidon-cipher": ^0.3.1
-    ethers: ^6.13.1
-  checksum: dd696a243f95fd91ab4aa15fb60a0bb56cbb2f9b78a205804fd73cecb3ec48323ead837b8f5a46fdf3f199dc939bbd02e510a029a9ab401f5088c8800f3c5b76
-  languageName: node
-  linkType: hard
-
 "maci-crypto@npm:2.0.0, maci-crypto@npm:^2.0.0":
   version: 2.0.0
   resolution: "maci-crypto@npm:2.0.0"
@@ -11460,15 +11433,6 @@ __metadata:
     "@zk-kit/poseidon-cipher": ^0.3.1
     ethers: ^6.13.2
   checksum: 6de73653b07428aaad895d98a78353803d9fefb03d3f9c996acc44a3c400691e9538628068c0a57229d3894461e58c6c09a8ec4cefd1b84739a28db3658cea4c
-  languageName: node
-  linkType: hard
-
-"maci-domainobjs@npm:0.0.0-ci.e7aa4dd":
-  version: 0.0.0-ci.e7aa4dd
-  resolution: "maci-domainobjs@npm:0.0.0-ci.e7aa4dd"
-  dependencies:
-    maci-crypto: 0.0.0-ci.e7aa4dd
-  checksum: 774cd954fade2f426dd518d12e41f78a2489cfdd12b722640c4dde45ec5cd3e5b92e887c477e1905612732cc145bef121c4f0433f73a535f182f44dc194d18ab
   languageName: node
   linkType: hard
 
