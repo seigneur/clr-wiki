@@ -107,7 +107,10 @@ export default function PollDetail({ id }: { id: bigint }) {
   }, [coordinatorPubKeyResult]);
 
   const castVote = async () => {
-    if (!poll || stateIndex == null || !coordinatorPubKey || !keypair) return;
+    if (!poll || stateIndex == null || !coordinatorPubKey || !keypair) {
+      notification.error("Error casting vote. Please refresh the page and try again.");
+      return;
+    }
 
     // check if the votes are valid
     if (isAnyInvalid) {
