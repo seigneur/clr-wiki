@@ -90,8 +90,10 @@ export default function AuthContextProvider({ children }: { children: React.Reac
     listener: logs => {
       logs.forEach(log => {
         if (
-          log.args._userPubKeyX !== keypair?.pubKey.asContractParam().x ||
-          log.args._userPubKeyY !== keypair?.pubKey.asContractParam().y
+          (keypair?.pubKey.asContractParam().x !== undefined &&
+            log.args._userPubKeyX !== BigInt(keypair?.pubKey.asContractParam().x)) ||
+          (keypair?.pubKey.asContractParam().y !== undefined &&
+            log.args._userPubKeyY !== BigInt(keypair?.pubKey.asContractParam().y))
         )
           return;
         refetchIsRegistered();
