@@ -1,4 +1,23 @@
-# Scaffold ETH 2 + MACI Voting Template
+# Intro
+
+Wikipedia already has a strong discussion based consensus model for editing information. However, there arises disputes from time to time which are resolved through various means, one such mechanism is dispute resolution noticeboard (DRN).
+
+Here we present a mechanism to improve upon the existing DRN by use of MACI from ethereum as a collusion resistant voting mechanism to choose a version of the edit. In our POC example we show how this can work.
+
+clr.wiki aims to be a system that can be plugged into wikipedia sort of information boards or can be a wiki standalone by itself.
+
+- [ ] Fork the MACI repo and make it work as is 
+- [ ] Build out the contracts required
+- [ ] Build out the UI required
+- [ ] Build out the NOUNS art UI
+- [ ] See if can integrate phala
+- [ ] Integrate the UI with IPFS for file saving
+- [ ] Integrate the UI with contracts and make the app work
+- [ ] Test out the voting system
+
+# Special Thanks - 
+
+## Scaffold ETH 2 + MACI Voting Template
 
 Welcome to the Scaffold ETH 2 + MACI Voting Template! This template is a powerful starting point for developers aiming to build decentralized voting applications that prioritize privacy and resist collusion. Combining the rapid development environment of Scaffold ETH with the innovative Minimal Anti-Collusion Infrastructure (MACI), this template offers a robust foundation for creating secure and transparent voting systems on the Ethereum blockchain.
 
