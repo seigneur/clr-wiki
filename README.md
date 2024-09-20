@@ -80,10 +80,10 @@ yarn start
 7. **Compute Results**
 
 - In a fourth terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` 
-- Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/cli`. 
+- Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/packages/cli`. 
 - Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
-- Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/contractAddresses.json maci/cli/build/contractAddresses.json`. 
-- After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/v1.2/cli).
+- Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/hardhat/contractAddresses.json maci/packages/cli/build/contractAddresses.json`. 
+- After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/quick-start/poll-finalization).
 - First merge signups, then merge messages, and then generate proof, and upload the tally.json file which is generated in the process to the admin panel after the poll is over.
 
 Navigate to `http://localhost:3000` to interact with your dApp. Modify your app configuration in `packages/nextjs/scaffold.config.ts` and `packages/hardhat/constants.ts` as necessary.

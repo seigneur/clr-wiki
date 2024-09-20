@@ -520,6 +520,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ethersproject/address@npm:5.6.1":
+  version: 5.6.1
+  resolution: "@ethersproject/address@npm:5.6.1"
+  dependencies:
+    "@ethersproject/bignumber": ^5.6.2
+    "@ethersproject/bytes": ^5.6.1
+    "@ethersproject/keccak256": ^5.6.1
+    "@ethersproject/logger": ^5.6.0
+    "@ethersproject/rlp": ^5.6.1
+  checksum: 262096ef05a1b626c161a72698a5d8b06aebf821fe01a1651ab40f80c29ca2481b96be7f972745785fd6399906509458c4c9a38f3bc1c1cb5afa7d2f76f7309a
+  languageName: node
+  linkType: hard
+
 "@ethersproject/address@npm:5.7.0, @ethersproject/address@npm:^5.0.0, @ethersproject/address@npm:^5.0.2, @ethersproject/address@npm:^5.7.0":
   version: 5.7.0
   resolution: "@ethersproject/address@npm:5.7.0"
@@ -552,7 +565,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/bignumber@npm:5.7.0, @ethersproject/bignumber@npm:^5.7.0":
+"@ethersproject/bignumber@npm:5.7.0, @ethersproject/bignumber@npm:^5.6.2, @ethersproject/bignumber@npm:^5.7.0":
   version: 5.7.0
   resolution: "@ethersproject/bignumber@npm:5.7.0"
   dependencies:
@@ -563,7 +576,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/bytes@npm:5.7.0, @ethersproject/bytes@npm:^5.7.0":
+"@ethersproject/bytes@npm:5.7.0, @ethersproject/bytes@npm:^5.6.1, @ethersproject/bytes@npm:^5.7.0":
   version: 5.7.0
   resolution: "@ethersproject/bytes@npm:5.7.0"
   dependencies:
@@ -657,7 +670,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/keccak256@npm:5.7.0, @ethersproject/keccak256@npm:^5.7.0":
+"@ethersproject/keccak256@npm:5.7.0, @ethersproject/keccak256@npm:^5.6.1, @ethersproject/keccak256@npm:^5.7.0":
   version: 5.7.0
   resolution: "@ethersproject/keccak256@npm:5.7.0"
   dependencies:
@@ -667,7 +680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/logger@npm:5.7.0, @ethersproject/logger@npm:^5.7.0":
+"@ethersproject/logger@npm:5.7.0, @ethersproject/logger@npm:^5.6.0, @ethersproject/logger@npm:^5.7.0":
   version: 5.7.0
   resolution: "@ethersproject/logger@npm:5.7.0"
   checksum: 075ab2f605f1fd0813f2e39c3308f77b44a67732b36e712d9bc085f22a84aac4da4f71b39bee50fe78da3e1c812673fadc41180c9970fe5e486e91ea17befe0d
@@ -740,7 +753,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/rlp@npm:5.7.0, @ethersproject/rlp@npm:^5.7.0":
+"@ethersproject/rlp@npm:5.7.0, @ethersproject/rlp@npm:^5.6.1, @ethersproject/rlp@npm:^5.7.0":
   version: 5.7.0
   resolution: "@ethersproject/rlp@npm:5.7.0"
   dependencies:
@@ -1395,7 +1408,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nomicfoundation/edr@npm:^0.5.0":
+"@nomicfoundation/edr@npm:^0.5.2":
   version: 0.5.2
   resolution: "@nomicfoundation/edr@npm:0.5.2"
   dependencies:
@@ -1661,6 +1674,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nomicfoundation/hardhat-ignition-ethers@npm:^0.15.0":
+  version: 0.15.5
+  resolution: "@nomicfoundation/hardhat-ignition-ethers@npm:0.15.5"
+  peerDependencies:
+    "@nomicfoundation/hardhat-ethers": ^3.0.4
+    "@nomicfoundation/hardhat-ignition": ^0.15.5
+    "@nomicfoundation/ignition-core": ^0.15.5
+    ethers: ^6.7.0
+    hardhat: ^2.18.0
+  checksum: 4fb0b7a88f907d51b6f28b3fb5f8c245659d49490f7976e421bf18fba331723be0292b35ac59f350f32fa75aef92d15e0926a3c811a3e15fd04942e22379d6d4
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/hardhat-ignition@npm:^0.15.5":
+  version: 0.15.5
+  resolution: "@nomicfoundation/hardhat-ignition@npm:0.15.5"
+  dependencies:
+    "@nomicfoundation/ignition-core": ^0.15.5
+    "@nomicfoundation/ignition-ui": ^0.15.5
+    chalk: ^4.0.0
+    debug: ^4.3.2
+    fs-extra: ^10.0.0
+    prompts: ^2.4.2
+  peerDependencies:
+    "@nomicfoundation/hardhat-verify": ^2.0.1
+    hardhat: ^2.18.0
+  checksum: eb7b006c31d6acfbb83cfffe0a0a0147a3ddaca2d4cf50273ca20e5214778ab766eaf93068d458c04fc35815f8236ad6c7f99e4ef5044ea9c1810ee4dadfd7c6
+  languageName: node
+  linkType: hard
+
 "@nomicfoundation/hardhat-network-helpers@npm:~1.0.6":
   version: 1.0.10
   resolution: "@nomicfoundation/hardhat-network-helpers@npm:1.0.10"
@@ -1717,6 +1760,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nomicfoundation/ignition-core@npm:^0.15.5":
+  version: 0.15.5
+  resolution: "@nomicfoundation/ignition-core@npm:0.15.5"
+  dependencies:
+    "@ethersproject/address": 5.6.1
+    "@nomicfoundation/solidity-analyzer": ^0.1.1
+    cbor: ^9.0.0
+    debug: ^4.3.2
+    ethers: ^6.7.0
+    fs-extra: ^10.0.0
+    immer: 10.0.2
+    lodash: 4.17.21
+    ndjson: 2.0.0
+  checksum: 643c78e7e51aeed14bd63103a195bec718ea8dcac5e28781070697a0a76394dcd96f269dd44f4021f77337d14db3a1ab50fd8b0f8d62cb58a7efb9fa7d1275da
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/ignition-ui@npm:^0.15.5":
+  version: 0.15.5
+  resolution: "@nomicfoundation/ignition-ui@npm:0.15.5"
+  checksum: d4d7a9e7e1d969b2cfdba3d90a172fb0952ee6ee8c91e0aac3294d480b3719686051fe9ce9aa8dc1d3d47b423461d8b387a88966db4c50bcde1367405fc7025f
+  languageName: node
+  linkType: hard
+
 "@nomicfoundation/solidity-analyzer-darwin-arm64@npm:0.1.1":
   version: 0.1.1
   resolution: "@nomicfoundation/solidity-analyzer-darwin-arm64@npm:0.1.1"
@@ -1724,10 +1791,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nomicfoundation/solidity-analyzer-darwin-arm64@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-darwin-arm64@npm:0.1.2"
+  checksum: 5bf3cf3f88e39d7b684f0ca75621b794b62e2676eb63c6977e847acc9c827bdc132143cc84e46be2797b93edc522f2c6f85bf5501fd7b8c85b346fb27e4dd488
+  languageName: node
+  linkType: hard
+
 "@nomicfoundation/solidity-analyzer-darwin-x64@npm:0.1.1":
   version: 0.1.1
   resolution: "@nomicfoundation/solidity-analyzer-darwin-x64@npm:0.1.1"
   conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/solidity-analyzer-darwin-x64@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-darwin-x64@npm:0.1.2"
+  checksum: 8061dc7749d97409ccde4a2e529316c29f83f2d07c78ffea87803777229e2a7d967bbb8bda564903ab5e9e89ad3b46cbcb060621209d1c6e4212c4b1b096c076
   languageName: node
   linkType: hard
 
@@ -1745,10 +1826,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nomicfoundation/solidity-analyzer-linux-arm64-gnu@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-linux-arm64-gnu@npm:0.1.2"
+  checksum: 46111d18446ea5d157628c202d1ee1fc3444b32a0e3aa24337bbb407653606a79a3b199bf1e5fe5f74c5c78833cf243e492f20ab6a1503137e89f2236b3ecfe7
+  languageName: node
+  linkType: hard
+
 "@nomicfoundation/solidity-analyzer-linux-arm64-musl@npm:0.1.1":
   version: 0.1.1
   resolution: "@nomicfoundation/solidity-analyzer-linux-arm64-musl@npm:0.1.1"
   conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/solidity-analyzer-linux-arm64-musl@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-linux-arm64-musl@npm:0.1.2"
+  checksum: 588e81e7b36cbe80b9d2c502dc2db4bf8706732bcea6906b79bac202eb441fa2f4b9f703c30d82a17ed2a4402eaf038057fb14fc1c16eac5ade103ff9b085cdc
   languageName: node
   linkType: hard
 
@@ -1759,10 +1854,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nomicfoundation/solidity-analyzer-linux-x64-gnu@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-linux-x64-gnu@npm:0.1.2"
+  checksum: 26f8307bde4a2c7609d297f2af6a50cad87aa46e914326b09d5cb424b4f45f0f75e982f9fcb9ee3361a2f9b141fcc9c10a665ddbc9686e01b017c639fbfb500b
+  languageName: node
+  linkType: hard
+
 "@nomicfoundation/solidity-analyzer-linux-x64-musl@npm:0.1.1":
   version: 0.1.1
   resolution: "@nomicfoundation/solidity-analyzer-linux-x64-musl@npm:0.1.1"
   conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/solidity-analyzer-linux-x64-musl@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-linux-x64-musl@npm:0.1.2"
+  checksum: d3628bae4f04bcdb2f1dec1d6790cdf97812e7e5c0a426f4227acc97883fa3165017a800375237e36bc588f0fb4971b0936a372869a801a97f42336ee4e42feb
   languageName: node
   linkType: hard
 
@@ -1784,6 +1893,13 @@ __metadata:
   version: 0.1.1
   resolution: "@nomicfoundation/solidity-analyzer-win32-x64-msvc@npm:0.1.1"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/solidity-analyzer-win32-x64-msvc@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer-win32-x64-msvc@npm:0.1.2"
+  checksum: 4a7d34d8419608cc343b6c028e07bd9ec72fd4ab82ccd36807ccf0fc8ad708b8d5baae9121532073ef08b2deb24d9c3a6f7b627c26f91f2a7de0cdb7024238f1
   languageName: node
   linkType: hard
 
@@ -1823,6 +1939,36 @@ __metadata:
     "@nomicfoundation/solidity-analyzer-win32-x64-msvc":
       optional: true
   checksum: 038cffafd5769e25256b5b8bef88d95cc1c021274a65c020cf84aceb3237752a3b51645fdb0687f5516a2bdfebf166fcf50b08ab64857925100213e0654b266b
+  languageName: node
+  linkType: hard
+
+"@nomicfoundation/solidity-analyzer@npm:^0.1.1":
+  version: 0.1.2
+  resolution: "@nomicfoundation/solidity-analyzer@npm:0.1.2"
+  dependencies:
+    "@nomicfoundation/solidity-analyzer-darwin-arm64": 0.1.2
+    "@nomicfoundation/solidity-analyzer-darwin-x64": 0.1.2
+    "@nomicfoundation/solidity-analyzer-linux-arm64-gnu": 0.1.2
+    "@nomicfoundation/solidity-analyzer-linux-arm64-musl": 0.1.2
+    "@nomicfoundation/solidity-analyzer-linux-x64-gnu": 0.1.2
+    "@nomicfoundation/solidity-analyzer-linux-x64-musl": 0.1.2
+    "@nomicfoundation/solidity-analyzer-win32-x64-msvc": 0.1.2
+  dependenciesMeta:
+    "@nomicfoundation/solidity-analyzer-darwin-arm64":
+      optional: true
+    "@nomicfoundation/solidity-analyzer-darwin-x64":
+      optional: true
+    "@nomicfoundation/solidity-analyzer-linux-arm64-gnu":
+      optional: true
+    "@nomicfoundation/solidity-analyzer-linux-arm64-musl":
+      optional: true
+    "@nomicfoundation/solidity-analyzer-linux-x64-gnu":
+      optional: true
+    "@nomicfoundation/solidity-analyzer-linux-x64-musl":
+      optional: true
+    "@nomicfoundation/solidity-analyzer-win32-x64-msvc":
+      optional: true
+  checksum: 0de3a317658345b9012285665bb4c810a98b3668bcf32a118912fda00e5760fa2c77d0a92bce6b687dcc7b4bb34b0a83f8e6748bfa68660a2303d781ca728aef
   languageName: node
   linkType: hard
 
@@ -2127,8 +2273,11 @@ __metadata:
     "@ethersproject/providers": ~5.7.1
     "@nomicfoundation/hardhat-chai-matchers": ~2.0.3
     "@nomicfoundation/hardhat-ethers": ~3.0.5
+    "@nomicfoundation/hardhat-ignition": ^0.15.5
+    "@nomicfoundation/hardhat-ignition-ethers": ^0.15.0
     "@nomicfoundation/hardhat-network-helpers": ~1.0.6
     "@nomicfoundation/hardhat-verify": ~2.0.3
+    "@nomicfoundation/ignition-core": ^0.15.5
     "@typechain/ethers-v5": ~10.1.0
     "@typechain/ethers-v6": ~0.5.1
     "@typechain/hardhat": ~9.1.0
@@ -2158,12 +2307,12 @@ __metadata:
     hardhat-deploy: ^0.12.2
     hardhat-deploy-ethers: ~0.4.1
     hardhat-gas-reporter: ~1.0.9
-    maci-circuits: 2.0.0
-    maci-cli: 2.0.0
-    maci-contracts: 2.0.0
-    maci-core: 2.0.0
-    maci-crypto: 2.0.0
-    maci-domainobjs: 2.0.0
+    maci-circuits: 2.3.0
+    maci-cli: 2.3.0
+    maci-contracts: 2.3.0
+    maci-core: 2.2.0
+    maci-crypto: 2.2.0
+    maci-domainobjs: 2.2.0
     prettier: ~2.8.4
     prompt: ^1.3.0
     qrcode: ~1.5.1
@@ -2204,8 +2353,8 @@ __metadata:
     eslint-config-next: ^14.0.4
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
-    maci-crypto: 2.0.0
-    maci-domainobjs: 2.0.0
+    maci-crypto: 2.2.0
+    maci-domainobjs: 2.2.0
     next: ^14.0.4
     next-themes: ^0.2.1
     nprogress: ^0.2.0
@@ -5587,6 +5736,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cbor@npm:^9.0.0":
+  version: 9.0.2
+  resolution: "cbor@npm:9.0.2"
+  dependencies:
+    nofilter: ^3.1.0
+  checksum: 925edae7bf964be5a26dba1b7ba6311ac12b6a66234dc958958997a0576cdc740632dc19852a5b84d8a75101936bea1fe122dc22539d6e11f4539c731853ba2e
+  languageName: node
+  linkType: hard
+
 "chai-as-promised@npm:^7.1.1":
   version: 7.1.1
   resolution: "chai-as-promised@npm:7.1.1"
@@ -5755,6 +5913,15 @@ __metadata:
     fsevents:
       optional: true
   checksum: b49fcde40176ba007ff361b198a2d35df60d9bb2a5aab228279eb810feae9294a6b4649ab15981304447afe1e6ffbf4788ad5db77235dc770ab777c6e771980c
+  languageName: node
+  linkType: hard
+
+"chokidar@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "chokidar@npm:4.0.0"
+  dependencies:
+    readdirp: ^4.0.1
+  checksum: f528f5cf22135fcdbe2ee44a89de3ebff4f94db7e101c55e5d92169bd4b52ce5b97d3ee0b74fe4fb57a065d2f2efce82f8bc687751e56b0a1870e9fe201b1c99
   languageName: node
   linkType: hard
 
@@ -8133,7 +8300,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethers@npm:^6.13.2":
+"ethers@npm:^6.13.2, ethers@npm:^6.7.0":
   version: 6.13.2
   resolution: "ethers@npm:6.13.2"
   dependencies:
@@ -9433,13 +9600,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hardhat@npm:^2.22.7":
-  version: 2.22.7
-  resolution: "hardhat@npm:2.22.7"
+"hardhat@npm:^2.22.8":
+  version: 2.22.11
+  resolution: "hardhat@npm:2.22.11"
   dependencies:
     "@ethersproject/abi": ^5.1.2
     "@metamask/eth-sig-util": ^4.0.0
-    "@nomicfoundation/edr": ^0.5.0
+    "@nomicfoundation/edr": ^0.5.2
     "@nomicfoundation/ethereumjs-common": 4.0.4
     "@nomicfoundation/ethereumjs-tx": 5.0.4
     "@nomicfoundation/ethereumjs-util": 9.0.4
@@ -9452,7 +9619,7 @@ __metadata:
     ansi-escapes: ^4.3.0
     boxen: ^5.1.2
     chalk: ^2.4.2
-    chokidar: ^3.4.0
+    chokidar: ^4.0.0
     ci-info: ^2.0.0
     debug: ^4.1.1
     enquirer: ^2.3.0
@@ -9465,6 +9632,7 @@ __metadata:
     glob: 7.2.0
     immutable: ^4.0.0-rc.12
     io-ts: 1.10.4
+    json-stream-stringify: ^3.1.4
     keccak: ^3.0.2
     lodash: ^4.17.11
     mnemonist: ^0.38.0
@@ -9490,7 +9658,7 @@ __metadata:
       optional: true
   bin:
     hardhat: internal/cli/bootstrap.js
-  checksum: 3b630db8c337d47d220ab0a94a009e61da0a4bb08cc4576ae33cb50e57d9dbb577ab64a85211914fc511e59cd5fca55c986e9ee2180c2e05657c084a14128b16
+  checksum: 92ab56371be773e3346c840ba85d811d9fda2f52f178e1451e08a6ee23cec06b8897960d4982c4000b3bafa137cffbf945801fd3c02874510b6afc1f3901b55c
   languageName: node
   linkType: hard
 
@@ -9921,6 +10089,13 @@ __metadata:
   version: 5.2.4
   resolution: "ignore@npm:5.2.4"
   checksum: 3d4c309c6006e2621659311783eaea7ebcd41fe4ca1d78c91c473157ad6666a57a2df790fe0d07a12300d9aac2888204d7be8d59f9aaf665b1c7fcdb432517ef
+  languageName: node
+  linkType: hard
+
+"immer@npm:10.0.2":
+  version: 10.0.2
+  resolution: "immer@npm:10.0.2"
+  checksum: 525a3b14210d02ae420c3b9f6ca14f7e9bcf625611d1356e773e7739f14c7c8de50dac442e6c7de3a6e24a782f7b792b6b8666bc0b3f00269d21a95f8f68ca84
   languageName: node
   linkType: hard
 
@@ -10747,6 +10922,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-stream-stringify@npm:^3.1.4":
+  version: 3.1.4
+  resolution: "json-stream-stringify@npm:3.1.4"
+  checksum: 4133e2975005983b1fd65fe9c57e17dd175a541f1a57257521e427e9b4cf5f0241dad85e87fe1edf7d8097fd14c0222dae18a54061a31b0fee5015267a841988
+  languageName: node
+  linkType: hard
+
 "json-stringify-safe@npm:^5.0.1, json-stringify-safe@npm:~5.0.1":
   version: 5.0.1
   resolution: "json-stringify-safe@npm:5.0.1"
@@ -10915,6 +11097,13 @@ __metadata:
     graceful-fs:
       optional: true
   checksum: 8f69e4797c26e7c3f2426bfa85f38a3da3c2cb1b4c6bd850d2377aed440d41ce9d806f2885c2e2e224372c56af4b1d43b8a499adecf9a05e7373dc6b8b7c52e4
+  languageName: node
+  linkType: hard
+
+"kleur@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "kleur@npm:3.0.3"
+  checksum: df82cd1e172f957bae9c536286265a5cdbd5eeca487cb0a3b2a7b41ef959fc61f8e7c0e9aeea9c114ccf2c166b6a8dd45a46fd619c1c569d210ecd2765ad5169
   languageName: node
   linkType: hard
 
@@ -11201,7 +11390,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
+"lodash@npm:4, lodash@npm:4.17.21, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -11354,94 +11543,94 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maci-circuits@npm:2.0.0, maci-circuits@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "maci-circuits@npm:2.0.0"
+"maci-circuits@npm:2.3.0, maci-circuits@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "maci-circuits@npm:2.3.0"
   dependencies:
     "@zk-kit/circuits": ^0.4.0
     circomkit: ^0.2.1
     circomlib: ^2.0.5
-    maci-core: ^2.0.0
-    maci-crypto: ^2.0.0
-    maci-domainobjs: ^2.0.0
+    maci-core: ^2.2.0
+    maci-crypto: ^2.2.0
+    maci-domainobjs: ^2.2.0
     snarkjs: ^0.7.4
-  checksum: c1d7607b4c1f88227bd66eb146523b7b0d4b410531dba32a227267d279589f10a337a262a7c9562907177d00b8c9db0880519864a2c08718b562a2ddab18f7c9
+  checksum: e00324f0eeb6f84e9e4f9c567e0872d6a712e1572d8df820c6a6db5cc190fea11bcce45dc2223bcf309c7e4b3712f5744b89f91907e59c4314f2d8ae45fd6e86
   languageName: node
   linkType: hard
 
-"maci-cli@npm:2.0.0":
-  version: 2.0.0
-  resolution: "maci-cli@npm:2.0.0"
+"maci-cli@npm:2.3.0":
+  version: 2.3.0
+  resolution: "maci-cli@npm:2.3.0"
   dependencies:
     "@commander-js/extra-typings": ^12.1.0
     "@nomicfoundation/hardhat-toolbox": ^5.0.0
     commander: ^12.1.0
     dotenv: ^16.4.5
     ethers: ^6.13.2
-    hardhat: ^2.22.7
-    maci-circuits: ^2.0.0
-    maci-contracts: ^2.0.0
-    maci-core: ^2.0.0
-    maci-crypto: ^2.0.0
-    maci-domainobjs: ^2.0.0
+    hardhat: ^2.22.8
+    maci-circuits: ^2.3.0
+    maci-contracts: ^2.3.0
+    maci-core: ^2.2.0
+    maci-crypto: ^2.2.0
+    maci-domainobjs: ^2.2.0
     prompt: ^1.3.0
   bin:
     maci-cli: ./build/ts/index.js
-  checksum: 36ad9a91ac9651ff2bceb84e698ca55869367679b833fc7e18f58ae8a3ccfe9730dfb66a465e88ad209be9f0c0ee2ec60bc2bf4873ef1654a3246106c581c1ab
+  checksum: 51b6210f54b18241d177b0ec81f8fd86410fecbd91ed3c3355b9ff60d8ef4908363e4b7b91966e768eacf25260475242b03095d6c401ae27b9034576f2b8cda4
   languageName: node
   linkType: hard
 
-"maci-contracts@npm:2.0.0, maci-contracts@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "maci-contracts@npm:2.0.0"
+"maci-contracts@npm:2.3.0, maci-contracts@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "maci-contracts@npm:2.3.0"
   dependencies:
     "@nomicfoundation/hardhat-ethers": ^3.0.6
     "@nomicfoundation/hardhat-toolbox": ^5.0.0
     "@openzeppelin/contracts": ^5.0.2
     circomlibjs: ^0.1.7
     ethers: ^6.13.2
-    hardhat: ^2.22.7
+    hardhat: ^2.22.8
     lowdb: ^1.0.0
-    maci-circuits: ^2.0.0
-    maci-core: ^2.0.0
-    maci-crypto: ^2.0.0
-    maci-domainobjs: ^2.0.0
+    maci-circuits: ^2.3.0
+    maci-core: ^2.2.0
+    maci-crypto: ^2.2.0
+    maci-domainobjs: ^2.2.0
     solidity-docgen: ^0.6.0-beta.36
     uuid: ^10.0.0
   bin:
     maci-contracts: ./build/ts/index.js
-  checksum: 225151476593a1e79340c19d733c7fd93caa5ca84ad28b49336833419790e56303d982db7314fc224203d3c8335d9cd20c8778e490ca4a417455fd89c1b29c09
+  checksum: 23a78016fb170dd3a8da572fa61b27dcd5ce95bbdc35859aa51a6b9530a98c0bba6ec157f6105345cac3deb0990eebba83680c01b463df94c15aa8bbe5e61cad
   languageName: node
   linkType: hard
 
-"maci-core@npm:2.0.0, maci-core@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "maci-core@npm:2.0.0"
+"maci-core@npm:2.2.0, maci-core@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "maci-core@npm:2.2.0"
   dependencies:
-    maci-crypto: ^2.0.0
-    maci-domainobjs: ^2.0.0
-  checksum: c081ba5d0a0b91c5d94ee8bf8bb029c4cd7a3024d24806d4b9aa7e6b5eb4e17da82435f63de5dd64de90aa8e2fd9d93feee5366bfcfcf47b01fc1d97ecfa111a
+    maci-crypto: ^2.2.0
+    maci-domainobjs: ^2.2.0
+  checksum: 0301c04bc37f83e01bec499299414602e70b38d12df0e3f44f921c40b2dd3c27f89436c72d3c61604bff76e22b9d3ef4e964ce7d44e59933bb762f77aa36383d
   languageName: node
   linkType: hard
 
-"maci-crypto@npm:2.0.0, maci-crypto@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "maci-crypto@npm:2.0.0"
+"maci-crypto@npm:2.2.0, maci-crypto@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "maci-crypto@npm:2.2.0"
   dependencies:
     "@zk-kit/baby-jubjub": ^1.0.1
     "@zk-kit/eddsa-poseidon": ^1.0.2
     "@zk-kit/poseidon-cipher": ^0.3.1
     ethers: ^6.13.2
-  checksum: 6de73653b07428aaad895d98a78353803d9fefb03d3f9c996acc44a3c400691e9538628068c0a57229d3894461e58c6c09a8ec4cefd1b84739a28db3658cea4c
+  checksum: 73436d0a2e613312dd09853d4203026ee943126cebaa0417532e974bec52e147df5e2abf360b57555dbfe118bb46d0f5a889ec3360fa94e22a1f3aa715d3c135
   languageName: node
   linkType: hard
 
-"maci-domainobjs@npm:2.0.0, maci-domainobjs@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "maci-domainobjs@npm:2.0.0"
+"maci-domainobjs@npm:2.2.0, maci-domainobjs@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "maci-domainobjs@npm:2.2.0"
   dependencies:
-    maci-crypto: ^2.0.0
-  checksum: 764e903d83dcaf8008284a4e871c23dc00648492aa6caae00c6ee3e139443f618da0abab6087cdf65a1482462f37cf1305871b4ecc594622d304c77981ba80ae
+    maci-crypto: ^2.2.0
+  checksum: 995e33b2f7748f098f9a4e52d1a6b84b6922cb0c5d238209438d1d7ff1b1045d66468c3d6bf9aef09115e3af8514505175adf29e1f3ee9e1a3ba14e065ea8866
   languageName: node
   linkType: hard
 
@@ -12087,6 +12276,21 @@ __metadata:
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
   checksum: 23ad088b08f898fc9b53011d7bb78ec48e79de7627e01ab5518e806033861bef68d5b0cd0e2205c2f36690ac9571ff6bcb05eb777ced2eeda8d4ac5b44592c3d
+  languageName: node
+  linkType: hard
+
+"ndjson@npm:2.0.0":
+  version: 2.0.0
+  resolution: "ndjson@npm:2.0.0"
+  dependencies:
+    json-stringify-safe: ^5.0.1
+    minimist: ^1.2.5
+    readable-stream: ^3.6.0
+    split2: ^3.0.0
+    through2: ^4.0.0
+  bin:
+    ndjson: cli.js
+  checksum: f847a51a2275b8a6a1bfdb24095183836b71c3085670161678c9922bc59644f04e53ced385e549a5565fdc44c28e206bd3f2199d12525028f843a86b680c4446
   languageName: node
   linkType: hard
 
@@ -13272,6 +13476,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prompts@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "prompts@npm:2.4.2"
+  dependencies:
+    kleur: ^3.0.3
+    sisteransi: ^1.0.5
+  checksum: d8fd1fe63820be2412c13bfc5d0a01909acc1f0367e32396962e737cb2fc52d004f3302475d5ce7d18a1e8a79985f93ff04ee03007d091029c3f9104bffc007d
+  languageName: node
+  linkType: hard
+
 "prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
@@ -13605,6 +13819,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.1.1, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
+  version: 3.6.2
+  resolution: "readable-stream@npm:3.6.2"
+  dependencies:
+    inherits: ^2.0.3
+    string_decoder: ^1.1.1
+    util-deprecate: ^1.0.1
+  checksum: bdcbe6c22e846b6af075e32cf8f4751c2576238c5043169a1c221c92ee2878458a816a4ea33f4c67623c0b6827c8a400409bfb3cf0bf3381392d0b1dfb52ac8d
+  languageName: node
+  linkType: hard
+
 "readable-stream@npm:^2.2.2":
   version: 2.3.8
   resolution: "readable-stream@npm:2.3.8"
@@ -13620,14 +13845,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^3.1.1, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
-  version: 3.6.2
-  resolution: "readable-stream@npm:3.6.2"
-  dependencies:
-    inherits: ^2.0.3
-    string_decoder: ^1.1.1
-    util-deprecate: ^1.0.1
-  checksum: bdcbe6c22e846b6af075e32cf8f4751c2576238c5043169a1c221c92ee2878458a816a4ea33f4c67623c0b6827c8a400409bfb3cf0bf3381392d0b1dfb52ac8d
+"readdirp@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "readdirp@npm:4.0.1"
+  checksum: b39747defe52922c2478874ffbb1fd0bececa7b3170466a5bc770795dd5296a309598990cbd809732079b2363e989d0008b8e91cfbac7b726f68c1947db2d31c
   languageName: node
   linkType: hard
 
@@ -14445,6 +14666,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sisteransi@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "sisteransi@npm:1.0.5"
+  checksum: aba6438f46d2bfcef94cf112c835ab395172c75f67453fe05c340c770d3c402363018ae1ab4172a1026a90c47eaccf3af7b6ff6fa749a680c2929bd7fa2b37a4
+  languageName: node
+  linkType: hard
+
 "slash@npm:^3.0.0":
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
@@ -14702,6 +14930,15 @@ __metadata:
   version: 1.1.0
   resolution: "split-on-first@npm:1.1.0"
   checksum: 16ff85b54ddcf17f9147210a4022529b343edbcbea4ce977c8f30e38408b8d6e0f25f92cd35b86a524d4797f455e29ab89eb8db787f3c10708e0b47ebf528d30
+  languageName: node
+  linkType: hard
+
+"split2@npm:^3.0.0":
+  version: 3.2.2
+  resolution: "split2@npm:3.2.2"
+  dependencies:
+    readable-stream: ^3.0.0
+  checksum: 8127ddbedd0faf31f232c0e9192fede469913aa8982aa380752e0463b2e31c2359ef6962eb2d24c125bac59eeec76873678d723b1c7ff696216a1cd071e3994a
   languageName: node
   linkType: hard
 
@@ -15386,6 +15623,15 @@ __metadata:
   dependencies:
     real-require: ^0.1.0
   checksum: 0547795a8f357ba1ac0dba29c71f965182e29e21752951a04a7167515ee37524bfba6c410f31e65a01a8d3e5b93400b812889aa09523e38ce4d744c894ffa6c0
+  languageName: node
+  linkType: hard
+
+"through2@npm:^4.0.0":
+  version: 4.0.2
+  resolution: "through2@npm:4.0.2"
+  dependencies:
+    readable-stream: 3
+  checksum: ac7430bd54ccb7920fd094b1c7ff3e1ad6edd94202e5528331253e5fde0cc56ceaa690e8df9895de2e073148c52dfbe6c4db74cacae812477a35660090960cc0
   languageName: node
   linkType: hard
 
