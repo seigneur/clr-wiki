@@ -33,7 +33,8 @@
     "precommit": "lint-staged",
     "vercel": "yarn workspace @se-2/nextjs vercel",
     "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
-    "download-zkeys": "yarn workspace @se-2/hardhat download-zkeys"
+    "download-zkeys": "yarn workspace @se-2/hardhat download-zkeys",
+    "hardhat": "yarn workspace @se-2/hardhat hardhat"
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {

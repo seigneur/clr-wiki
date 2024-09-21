@@ -16,8 +16,7 @@
     "test": "REPORT_GAS=true hardhat test --network hardhat",
     "verify": "hardhat etherscan-verify",
     "download-zkeys": "./maci-scripts/download_zkeys.sh",
-    "merge": "maci-cli mergeSignups --poll-id 0",
-    "maci-cli": "maci-cli"
+    "hardhat": "hardhat"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^12.0.1",
