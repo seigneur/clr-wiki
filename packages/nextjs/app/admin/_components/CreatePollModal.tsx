@@ -19,11 +19,11 @@ export default function Example({
   refetchPolls: () => void;
 }) {
   const [pollData, setPollData] = useState({
-    title: "Dummy Title",
+    title: "Proposal 0", // Hard coded for now
     expiry: new Date(),
-    pollType: PollType.NOT_SELECTED,
-    mode: EMode.QV,
-    options: [""],
+    pollType: PollType.SINGLE_VOTE,
+    mode: EMode.NON_QV,
+    options: ["Accept", "Refuse"],
   });
   const [isEditingTitle, setIsEditingTitle] = useState<boolean>(false);
 
@@ -114,7 +114,7 @@ export default function Example({
     <Modal show={show} setOpen={setOpen}>
       <div className="mt-3 text-center sm:mt-5 mb-6">
         <Dialog.Title as="h3" className="font-bold leading-6 text-2xl text-neutral-content">
-          Create a Poll
+          Resolve a proposal
         </Dialog.Title>
       </div>
 
