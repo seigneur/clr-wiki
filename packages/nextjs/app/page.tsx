@@ -1,33 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import RegisterButton from "./_components/RegisterButton";
 import type { NextPage } from "next";
-import HeroImage from "~~/assets/private_voting.png";
-import { useAuthUserOnly } from "~~/hooks/useAuthUserOnly";
 
 const Home: NextPage = () => {
-  useAuthUserOnly({ inverted: true });
-
   return (
     <>
-      <div className="flex items-center flex-col flex-grow pt-10">
-        <div className="px-5">
-          <h1 className="text-4xl font-bold text-center">Private Voting Starter Kit with MACI</h1>
-
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-10 sm:w-2/3 mx-auto gap-x-10 gap-y-5 mb-10">
-            <div className="flex-1">
-              <p className="text-lg mt-5 text-justify">
-                This starter kit is designed to help you get started with private voting using the Minimal
-                Anti-Collusion Infrastructure (MACI).
-              </p>
-              <div className="text-center">
-                <RegisterButton />
-              </div>
-            </div>
-            <div className="flex-1">
-              <Image src={HeroImage} alt="MACI" className="w-full" />
-            </div>
+      <div className="bg-emerald-800 lg:px-20 lg:py-20 py-10 px-6">
+        <h3 className="font-serif text-4xl">Cleer</h3>
+        <p className="opacity-75 text-sm font-light mt-0">Lorem ipsum</p>
+      </div>
+      <div className="lg:px-20 lg:py-20 py-10 px-6">
+        <h4 className="mt-8 mb-2 font-semibold text-lg">Most edited articles this week</h4>
+        <div className="flex flex-col gap-6">
+          <div className="border-2 border-emerald-700 p-4 rounded shadow hover:scale-[1.01] transition cursor-pointer ease-in-out">
+            <h5 className="font-semibold text-lg underline">Dinkoism</h5>
+            <p className="mb-0">
+              Dinkoism (/ˈdɪnkɔɪzəm/), the Dinkoist religion, or Dinkamatham[3][2] is a parody religion and social
+              movement that emerged and evolved on social networks[4] organized by independent welfare groups in the
+              Indian state of Kerala. Adherents describe Dinkoism as a genuine religion.
+            </p>
           </div>
         </div>
       </div>

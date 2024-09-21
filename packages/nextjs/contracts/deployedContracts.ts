@@ -252,29 +252,6 @@ const deployedContracts = {
               type: "uint256",
             },
             {
-              components: [
-                {
-                  internalType: "address",
-                  name: "poll",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "messageProcessor",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "tally",
-                  type: "address",
-                },
-              ],
-              indexed: false,
-              internalType: "struct MACI.PollContracts",
-              name: "pollAddr",
-              type: "tuple",
-            },
-            {
               indexed: false,
               internalType: "enum DomainObjs.Mode",
               name: "_mode",
@@ -563,30 +540,7 @@ const deployedContracts = {
             },
           ],
           name: "deployPoll",
-          outputs: [
-            {
-              components: [
-                {
-                  internalType: "address",
-                  name: "poll",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "messageProcessor",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "tally",
-                  type: "address",
-                },
-              ],
-              internalType: "struct MACI.PollContracts",
-              name: "pollAddr",
-              type: "tuple",
-            },
-          ],
+          outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
@@ -806,9 +760,26 @@ const deployedContracts = {
           name: "getPoll",
           outputs: [
             {
-              internalType: "address",
-              name: "poll",
-              type: "address",
+              components: [
+                {
+                  internalType: "address",
+                  name: "poll",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "messageProcessor",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "tally",
+                  type: "address",
+                },
+              ],
+              internalType: "struct MACI.PollContracts",
+              name: "pollContracts",
+              type: "tuple",
             },
           ],
           stateMutability: "view",
@@ -1249,7 +1220,17 @@ const deployedContracts = {
           outputs: [
             {
               internalType: "address",
-              name: "",
+              name: "poll",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "messageProcessor",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "tally",
               type: "address",
             },
           ],
@@ -1602,11 +1583,6 @@ const deployedContracts = {
         },
         {
           inputs: [],
-          name: "InvalidMaxValues",
-          type: "error",
-        },
-        {
-          inputs: [],
           name: "MESSAGE_DATA_LENGTH",
           outputs: [
             {
@@ -1624,23 +1600,6 @@ const deployedContracts = {
               internalType: "uint256",
               name: "_duration",
               type: "uint256",
-            },
-            {
-              components: [
-                {
-                  internalType: "uint256",
-                  name: "maxMessages",
-                  type: "uint256",
-                },
-                {
-                  internalType: "uint256",
-                  name: "maxVoteOptions",
-                  type: "uint256",
-                },
-              ],
-              internalType: "struct Params.MaxValues",
-              name: "_maxValues",
-              type: "tuple",
             },
             {
               components: [
@@ -2015,9 +1974,9 @@ const deployedContracts = {
               type: "tuple",
             },
             {
-              internalType: "uint256",
-              name: "input",
-              type: "uint256",
+              internalType: "uint256[]",
+              name: "inputs",
+              type: "uint256[]",
             },
           ],
           name: "verify",
