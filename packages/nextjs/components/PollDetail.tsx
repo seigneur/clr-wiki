@@ -248,9 +248,9 @@ export default function PollDetail({ id }: { id: bigint }) {
         )}
 
         {result && (
-          <table className="table border border-separate rounded border-emerald-700 table-xs">
+          <table className="table border border-separate rounded border-emerald-700 table-xs w-fit">
             <thead>
-              <tr className="">
+              <tr className="text-center">
                 <th>Decision</th>
                 <th className="">Votes</th>
               </tr>

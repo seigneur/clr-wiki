@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     <>
       <div className="bg-emerald-800 lg:px-20 lg:py-10 py-4 px-6">
         <div className="">
-          <h3 className="font-serif text-4xl">Cleer</h3>
+          <h3 className="font-serif text-4xl">clr</h3>
           <p className="opacity-75 text-sm font-light mt-0">
             Collusion resistant Information dispute resolution using MACI
           </p>

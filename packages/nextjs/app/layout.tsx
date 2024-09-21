@@ -15,8 +15,8 @@ const baseUrl = process.env.VERCEL_URL
   : `http://localhost:${process.env.PORT || 3000}`;
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
-const title = "Cleer";
-const titleTemplate = "%s | Cleer";
+const title = "clr";
+const titleTemplate = "%s | clr";
 const description = "Collusion resistant Information dispute resolution using MACI";
 
 export const metadata: Metadata = {
