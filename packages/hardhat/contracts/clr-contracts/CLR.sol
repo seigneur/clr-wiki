@@ -7,6 +7,7 @@ contract CLR {
     struct Resource {
         string dataCID;       // IPFS hash of the current version
         address coordinator;
+        bytes commitment;
     }
 
     struct Proposal {
@@ -35,7 +36,8 @@ contract CLR {
 
         resources[_drnId] = Resource({
             dataCID: _currentVersion,
-            coordinator: msg.sender
+            coordinator: msg.sender,
+            commitment: ""
         });
 
         emit ResourceCreated(_drnId, _currentVersion, msg.sender);
@@ -60,7 +62,7 @@ contract CLR {
     }
 
     // Function to make the proposed version the current version and mark the Resource as resolved
-    function acceptProposedVersion(string calldata _drnId, uint proposalId,  uint8 _acceptFail) public {
+    function acceptProposedVersion(string calldata _drnId, uint proposalId,  uint8 _acceptFail, bytes calldata _commitment) public {
         require(proposals[proposalId].status == 0, "Resource already settled");
         if(_acceptFail == 0){
             proposals[proposalId].status = 2;
@@ -68,6 +70,7 @@ contract CLR {
         else{
             proposals[proposalId].status = 1;
             resources[_drnId].dataCID = proposals[proposalId].proposedVersion;
+            resources[_drnId].commitment = _commitment;
         }
 
 
