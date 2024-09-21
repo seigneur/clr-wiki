@@ -2,36 +2,39 @@
 pragma solidity ^0.8.20;
 
 contract CLR {
+    uint proposalCount;
 
     struct Resource {
-        string currentVersion;       // IPFS hash of the current version
-        string proposedVersion;      // IPFS hash of the proposed version
-        uint8 status;                // 1 for resolved, 0 for failed,2 for open
-        address proposer;            // Address of the proposer
+        string dataCID;       // IPFS hash of the current version
         address coordinator;
     }
 
-    mapping(uint256 => Resource) public Resources;
-    mapping(address => Resource) public ResourcesByCoordinator;
+    struct Proposal {
+        string proposedVersion;      // IPFS hash of the proposed version
+        uint8 status;                // 0 for open, 1 for resolved, 2 for failed
+        address proposer;            // Address of the proposer
+        string drnId;
+    }
+
+    mapping(string => Resource) public resources;
+    mapping(uint => Proposal) public proposals;
+    mapping(string => uint[]) public proposalList;
+    mapping(address => Resource) public resourcesByCoordinator;
 
     // Event when a new Resource is created
-    event ResourceCreated(uint256 drnId, string currentVersion, address proposer);
+    event ResourceCreated(string drnId, string currentVersion, address proposer);
 
     // Event when the proposed version is updated
-    event ProposedVersionUpdated(uint256 drnId, string proposedVersion);
+    event ProposedVersionUpdated(string drnId, string proposedVersion);
 
     // Event when the current version is updated
-    event CurrentVersionUpdated(uint256 drnId, string newCurrentVersion);
+    event CurrentVersionUpdated(string drnId, uint proposalId, uint8 acceptFail);
 
     // Function to create a new Resource currently anyone can create
-    function createResource(uint256 _drnId, string memory _currentVersion) public {
-        require(Resources[_drnId].status == 0, "Resource already exists");
+    function createResource(string calldata _drnId, string memory _currentVersion) public {
 
-        Resources[_drnId] = Resource({
-            currentVersion: _currentVersion,
-            proposedVersion: "",
-            status: 2,
-            proposer: address(0),
+        resources[_drnId] = Resource({
+            dataCID: _currentVersion,
             coordinator: msg.sender
         });
 
@@ -39,29 +42,35 @@ contract CLR {
     }
 
     // Function to get the current version of the Resource's hash
-    function getCurrentVersion(uint256 _drnId) public view returns (string memory) {
-        return Resources[_drnId].currentVersion;
+    function getCurrentVersion(string calldata _drnId) public view returns (string memory) {
+        return resources[_drnId].dataCID;
     }
 
     // Function to update the proposed version of a Resource, anyone can propose
-    function updateProposedVersion(uint256 _drnId, string memory _proposedVersion, address _proposer) public {
-        require(Resources[_drnId].status == 2, "Resource already settled");
-
-        Resources[_drnId].proposedVersion = _proposedVersion;
-        Resources[_drnId].proposer = _proposer;
+    function updateProposedVersion(string calldata _drnId, string memory _proposedVersion) public {
+        proposals[proposalCount++] = Proposal({
+            proposedVersion: _proposedVersion,
+            proposer: msg.sender,
+            status: 0,
+            drnId: _drnId
+        });
+        proposalList[_drnId].push(proposalCount); 
 
         emit ProposedVersionUpdated(_drnId, _proposedVersion);
     }
 
     // Function to make the proposed version the current version and mark the Resource as resolved
-    function acceptProposedVersion(uint256 _drnId, uint8 _acceptFail) public {
-        require(Resources[_drnId].status == 2, "Resource already settled");
-        require(bytes(Resources[_drnId].proposedVersion).length > 0, "No proposed version to accept");
+    function acceptProposedVersion(string calldata _drnId, uint proposalId,  uint8 _acceptFail) public {
+        require(proposals[proposalId].status == 0, "Resource already settled");
+        if(_acceptFail == 0){
+            proposals[proposalId].status = 2;
+        }
+        else{
+            proposals[proposalId].status = 1;
+            resources[_drnId].dataCID = proposals[proposalId].proposedVersion;
+        }
 
-        Resources[_drnId].currentVersion = Resources[_drnId].proposedVersion;
-        Resources[_drnId].proposedVersion = "";
-        Resources[_drnId].status = _acceptFail;  // Mark as resolved
 
-        emit CurrentVersionUpdated(_drnId, Resources[_drnId].currentVersion);
+        emit CurrentVersionUpdated(_drnId, proposalId, _acceptFail);
     }
 }

@@ -14,15 +14,21 @@ const deployedContracts = {
           inputs: [
             {
               indexed: false,
-              internalType: "uint256",
+              internalType: "string",
               name: "drnId",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "proposalId",
               type: "uint256",
             },
             {
               indexed: false,
-              internalType: "string",
-              name: "newCurrentVersion",
-              type: "string",
+              internalType: "uint8",
+              name: "acceptFail",
+              type: "uint8",
             },
           ],
           name: "CurrentVersionUpdated",
@@ -33,9 +39,9 @@ const deployedContracts = {
           inputs: [
             {
               indexed: false,
-              internalType: "uint256",
+              internalType: "string",
               name: "drnId",
-              type: "uint256",
+              type: "string",
             },
             {
               indexed: false,
@@ -52,9 +58,9 @@ const deployedContracts = {
           inputs: [
             {
               indexed: false,
-              internalType: "uint256",
+              internalType: "string",
               name: "drnId",
-              type: "uint256",
+              type: "string",
             },
             {
               indexed: false,
@@ -75,86 +81,13 @@ const deployedContracts = {
         {
           inputs: [
             {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
-          ],
-          name: "Resources",
-          outputs: [
-            {
               internalType: "string",
-              name: "currentVersion",
-              type: "string",
-            },
-            {
-              internalType: "string",
-              name: "proposedVersion",
-              type: "string",
-            },
-            {
-              internalType: "uint8",
-              name: "status",
-              type: "uint8",
-            },
-            {
-              internalType: "address",
-              name: "proposer",
-              type: "address",
-            },
-            {
-              internalType: "address",
-              name: "coordinator",
-              type: "address",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
-          name: "ResourcesByCoordinator",
-          outputs: [
-            {
-              internalType: "string",
-              name: "currentVersion",
-              type: "string",
-            },
-            {
-              internalType: "string",
-              name: "proposedVersion",
-              type: "string",
-            },
-            {
-              internalType: "uint8",
-              name: "status",
-              type: "uint8",
-            },
-            {
-              internalType: "address",
-              name: "proposer",
-              type: "address",
-            },
-            {
-              internalType: "address",
-              name: "coordinator",
-              type: "address",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            {
-              internalType: "uint256",
               name: "_drnId",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "proposalId",
               type: "uint256",
             },
             {
@@ -171,9 +104,9 @@ const deployedContracts = {
         {
           inputs: [
             {
-              internalType: "uint256",
+              internalType: "string",
               name: "_drnId",
-              type: "uint256",
+              type: "string",
             },
             {
               internalType: "string",
@@ -189,9 +122,9 @@ const deployedContracts = {
         {
           inputs: [
             {
-              internalType: "uint256",
+              internalType: "string",
               name: "_drnId",
-              type: "uint256",
+              type: "string",
             },
           ],
           name: "getCurrentVersion",
@@ -208,19 +141,120 @@ const deployedContracts = {
         {
           inputs: [
             {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+            {
               internalType: "uint256",
-              name: "_drnId",
+              name: "",
               type: "uint256",
+            },
+          ],
+          name: "proposalList",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "proposals",
+          outputs: [
+            {
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+            {
+              internalType: "uint8",
+              name: "status",
+              type: "uint8",
+            },
+            {
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+            {
+              internalType: "string",
+              name: "drnId",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          name: "resources",
+          outputs: [
+            {
+              internalType: "string",
+              name: "dataCID",
+              type: "string",
+            },
+            {
+              internalType: "address",
+              name: "coordinator",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "resourcesByCoordinator",
+          outputs: [
+            {
+              internalType: "string",
+              name: "dataCID",
+              type: "string",
+            },
+            {
+              internalType: "address",
+              name: "coordinator",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_drnId",
+              type: "string",
             },
             {
               internalType: "string",
               name: "_proposedVersion",
               type: "string",
-            },
-            {
-              internalType: "address",
-              name: "_proposer",
-              type: "address",
             },
           ],
           name: "updateProposedVersion",
