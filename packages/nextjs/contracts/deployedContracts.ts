@@ -5,9 +5,9 @@
 import { GenericContractsDeclaration } from "../utils/scaffold-eth/contract";
 
 const deployedContracts = {
-  31337: {
+  11155111: {
     CLR: {
-      address: "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
+      address: "0xF889Fdc61C341dec233357F58F674DE053cfb355",
       abi: [
         {
           anonymous: false,
@@ -292,10 +292,10 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {},
-      deploymentBlockNumber: 28,
+      deploymentBlockNumber: 6734568,
     },
     ConstantInitialVoiceCreditProxy: {
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      address: "0x8673e5370C11190680DF534543c74baaEF5a7F9F",
       abi: [
         {
           inputs: [
@@ -333,10 +333,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 1,
+      deploymentBlockNumber: 6734513,
     },
     FreeForAllGatekeeper: {
-      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      address: "0xa0672Ca353885B5752F90db3a7606E3b88f74440",
       abi: [
         {
           inputs: [],
@@ -388,10 +388,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 3,
+      deploymentBlockNumber: 6734514,
     },
     MACIWrapper: {
-      address: "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+      address: "0x79430fa0f9667C3D13EdC77eCb64497b14f76A92",
       abi: [
         {
           inputs: [
@@ -1801,10 +1801,10 @@ const deployedContracts = {
         stateTreeDepth: "maci-contracts/contracts/MACI.sol",
         tallyFactory: "maci-contracts/contracts/MACI.sol",
       },
-      deploymentBlockNumber: 21,
+      deploymentBlockNumber: 6734523,
     },
     MessageProcessorFactory: {
-      address: "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+      address: "0x410FBECd817c6f9FeC3C7d184aa83C66d132dD4F",
       abi: [
         {
           inputs: [],
@@ -1859,10 +1859,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 17,
+      deploymentBlockNumber: 6734521,
     },
     PollFactory: {
-      address: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+      address: "0xCB8DC6bfd94f99dda7071e41F6a02c149368D395",
       abi: [
         {
           inputs: [],
@@ -1956,10 +1956,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 15,
+      deploymentBlockNumber: 6734520,
     },
     PoseidonT3: {
-      address: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+      address: "0xd94b9aE62067cE0A7703bcCCEF792DE74428B348",
       abi: [
         {
           inputs: [
@@ -1981,10 +1981,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 7,
+      deploymentBlockNumber: 6734516,
     },
     PoseidonT4: {
-      address: "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      address: "0x1911643B982B37779F1C1d65900FC42499240066",
       abi: [
         {
           inputs: [
@@ -2006,10 +2006,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 9,
+      deploymentBlockNumber: 6734517,
     },
     PoseidonT5: {
-      address: "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+      address: "0x33764231F52fFF5fF2E2331E295ec8Ff67ffe8B8",
       abi: [
         {
           inputs: [
@@ -2031,10 +2031,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 11,
+      deploymentBlockNumber: 6734518,
     },
     PoseidonT6: {
-      address: "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      address: "0x70a6520eB5AAA0776f7f766Ff2D6eEa6CB3AAcF9",
       abi: [
         {
           inputs: [
@@ -2056,10 +2056,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 13,
+      deploymentBlockNumber: 6734519,
     },
     TallyFactory: {
-      address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+      address: "0x9C6d9F8a10Af92EFf70DBF8EdA0dB2929D7f0c06",
       abi: [
         {
           inputs: [],
@@ -2119,10 +2119,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 19,
+      deploymentBlockNumber: 6734522,
     },
     Verifier: {
-      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      address: "0x43E2282f852a98C620ddC264c16436697AAEae49",
       abi: [
         {
           inputs: [],
@@ -2279,10 +2279,10 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 5,
+      deploymentBlockNumber: 6734515,
     },
     VkRegistry: {
-      address: "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
+      address: "0x7971f6F9329dAECCF9D43b2F40fB42D8b22decdF",
       abi: [
         {
           inputs: [],
@@ -3542,7 +3542,7 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      deploymentBlockNumber: 24,
+      deploymentBlockNumber: 6734525,
     },
   },
   11155420: {

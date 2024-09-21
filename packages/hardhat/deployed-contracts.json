@@ -124,5 +124,131 @@
         "count": 4
       }
     }
+  },
+  "sepolia": {
+    "instance": {
+      "0x8673e5370C11190680DF534543c74baaEF5a7F9F": {
+        "id": "ConstantInitialVoiceCreditProxy",
+        "verify": {
+          "args": "[\"99\"]"
+        }
+      },
+      "0xa0672Ca353885B5752F90db3a7606E3b88f74440": {
+        "id": "FreeForAllGatekeeper",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x43E2282f852a98C620ddC264c16436697AAEae49": {
+        "id": "Verifier",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xd94b9aE62067cE0A7703bcCCEF792DE74428B348": {
+        "id": "PoseidonT3",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x1911643B982B37779F1C1d65900FC42499240066": {
+        "id": "PoseidonT4",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x33764231F52fFF5fF2E2331E295ec8Ff67ffe8B8": {
+        "id": "PoseidonT5",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x70a6520eB5AAA0776f7f766Ff2D6eEa6CB3AAcF9": {
+        "id": "PoseidonT6",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0xCB8DC6bfd94f99dda7071e41F6a02c149368D395": {
+        "id": "PollFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x410FBECd817c6f9FeC3C7d184aa83C66d132dD4F": {
+        "id": "MessageProcessorFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x9C6d9F8a10Af92EFf70DBF8EdA0dB2929D7f0c06": {
+        "id": "TallyFactory",
+        "verify": {
+          "args": "[]"
+        }
+      },
+      "0x79430fa0f9667C3D13EdC77eCb64497b14f76A92": {
+        "id": "MACI",
+        "verify": {
+          "args": "[\"0xCB8DC6bfd94f99dda7071e41F6a02c149368D395\",\"0x410FBECd817c6f9FeC3C7d184aa83C66d132dD4F\",\"0x9C6d9F8a10Af92EFf70DBF8EdA0dB2929D7f0c06\",\"0xa0672Ca353885B5752F90db3a7606E3b88f74440\",\"0x8673e5370C11190680DF534543c74baaEF5a7F9F\",10,[\"16015576667038038422103932363190100635991292382181099511410843174865570503661\",\"166510078825589460025300915201657086611944528317298994959376081297530246971\",\"10057734083972610459557695472359628128485394923403014377687504571662791937025\",\"4904828619307091008204672239231377290495002626534171783829482835985709082773\",\"18694062287284245784028624966421731916526814537891066525886866373016385890569\"]]"
+        }
+      },
+      "0x7971f6F9329dAECCF9D43b2F40fB42D8b22decdF": {
+        "id": "VkRegistry",
+        "verify": {
+          "args": "[]"
+        }
+      }
+    },
+    "named": {
+      "ConstantInitialVoiceCreditProxy": {
+        "address": "0x8673e5370C11190680DF534543c74baaEF5a7F9F",
+        "count": 2
+      },
+      "FreeForAllGatekeeper": {
+        "address": "0xa0672Ca353885B5752F90db3a7606E3b88f74440",
+        "count": 2
+      },
+      "Verifier": {
+        "address": "0x43E2282f852a98C620ddC264c16436697AAEae49",
+        "count": 2
+      },
+      "PoseidonT3": {
+        "address": "0xd94b9aE62067cE0A7703bcCCEF792DE74428B348",
+        "count": 2
+      },
+      "PoseidonT4": {
+        "address": "0x1911643B982B37779F1C1d65900FC42499240066",
+        "count": 2
+      },
+      "PoseidonT5": {
+        "address": "0x33764231F52fFF5fF2E2331E295ec8Ff67ffe8B8",
+        "count": 2
+      },
+      "PoseidonT6": {
+        "address": "0x70a6520eB5AAA0776f7f766Ff2D6eEa6CB3AAcF9",
+        "count": 2
+      },
+      "PollFactory": {
+        "address": "0xCB8DC6bfd94f99dda7071e41F6a02c149368D395",
+        "count": 2
+      },
+      "MessageProcessorFactory": {
+        "address": "0x410FBECd817c6f9FeC3C7d184aa83C66d132dD4F",
+        "count": 2
+      },
+      "TallyFactory": {
+        "address": "0x9C6d9F8a10Af92EFf70DBF8EdA0dB2929D7f0c06",
+        "count": 2
+      },
+      "MACI": {
+        "address": "0x79430fa0f9667C3D13EdC77eCb64497b14f76A92",
+        "count": 2
+      },
+      "VkRegistry": {
+        "address": "0x7971f6F9329dAECCF9D43b2F40fB42D8b22decdF",
+        "count": 1
+      }
+    }
   }
 }
