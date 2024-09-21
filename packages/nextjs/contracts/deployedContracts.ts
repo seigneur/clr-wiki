@@ -10,8 +10,191 @@ const deployedContracts = {
       address: "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
       abi: [
         {
-          inputs: [],
-          name: "getIPFSHash",
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "drnId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "newCurrentVersion",
+              type: "string",
+            },
+          ],
+          name: "CurrentVersionUpdated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "drnId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+          ],
+          name: "ProposedVersionUpdated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "drnId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "currentVersion",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+          ],
+          name: "ResourceCreated",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "Resources",
+          outputs: [
+            {
+              internalType: "string",
+              name: "currentVersion",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+            {
+              internalType: "uint8",
+              name: "status",
+              type: "uint8",
+            },
+            {
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "coordinator",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "ResourcesByCoordinator",
+          outputs: [
+            {
+              internalType: "string",
+              name: "currentVersion",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+            {
+              internalType: "uint8",
+              name: "status",
+              type: "uint8",
+            },
+            {
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "coordinator",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+            {
+              internalType: "uint8",
+              name: "_acceptFail",
+              type: "uint8",
+            },
+          ],
+          name: "acceptProposedVersion",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "_currentVersion",
+              type: "string",
+            },
+          ],
+          name: "createResource",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+          ],
+          name: "getCurrentVersion",
           outputs: [
             {
               internalType: "string",
@@ -25,12 +208,22 @@ const deployedContracts = {
         {
           inputs: [
             {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+            {
               internalType: "string",
-              name: "_ipfsHash",
+              name: "_proposedVersion",
               type: "string",
             },
+            {
+              internalType: "address",
+              name: "_proposer",
+              type: "address",
+            },
           ],
-          name: "setIPFSHash",
+          name: "updateProposedVersion",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
@@ -3292,11 +3485,194 @@ const deployedContracts = {
   },
   11155420: {
     CLR: {
-      address: "0x1EDED83B62Fca2f189dA40f370F0f925B5Ccd005",
+      address: "0x480F765D0e7779BFf7e4154f206110f2D95c3238",
       abi: [
         {
-          inputs: [],
-          name: "getIPFSHash",
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "drnId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "newCurrentVersion",
+              type: "string",
+            },
+          ],
+          name: "CurrentVersionUpdated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "drnId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+          ],
+          name: "ProposedVersionUpdated",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "drnId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "currentVersion",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+          ],
+          name: "ResourceCreated",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "Resources",
+          outputs: [
+            {
+              internalType: "string",
+              name: "currentVersion",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+            {
+              internalType: "uint8",
+              name: "status",
+              type: "uint8",
+            },
+            {
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "coordinator",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "ResourcesByCoordinator",
+          outputs: [
+            {
+              internalType: "string",
+              name: "currentVersion",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "proposedVersion",
+              type: "string",
+            },
+            {
+              internalType: "uint8",
+              name: "status",
+              type: "uint8",
+            },
+            {
+              internalType: "address",
+              name: "proposer",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "coordinator",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+            {
+              internalType: "uint8",
+              name: "_acceptFail",
+              type: "uint8",
+            },
+          ],
+          name: "acceptProposedVersion",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "_currentVersion",
+              type: "string",
+            },
+          ],
+          name: "createResource",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+          ],
+          name: "getCurrentVersion",
           outputs: [
             {
               internalType: "string",
@@ -3310,19 +3686,29 @@ const deployedContracts = {
         {
           inputs: [
             {
+              internalType: "uint256",
+              name: "_drnId",
+              type: "uint256",
+            },
+            {
               internalType: "string",
-              name: "_ipfsHash",
+              name: "_proposedVersion",
               type: "string",
             },
+            {
+              internalType: "address",
+              name: "_proposer",
+              type: "address",
+            },
           ],
-          name: "setIPFSHash",
+          name: "updateProposedVersion",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
       ],
       inheritedFunctions: {},
-      deploymentBlockNumber: 17539712,
+      deploymentBlockNumber: 17554167,
     },
   },
 } as const;
