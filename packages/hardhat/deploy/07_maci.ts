@@ -2,7 +2,9 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 import { GatekeeperContractName, InitialVoiceCreditProxyContractName, stateTreeDepth } from "../constants";
 import { MACIWrapper, SignUpGatekeeper } from "../typechain-types";
-import { genEmptyBallotRoots } from "maci-contracts";
+import { genEmptyBallotRoots, ContractStorage, EContracts } from "maci-contracts";
+
+const storage = ContractStorage.getInstance();
 
 const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
@@ -45,6 +47,22 @@ const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvir
 
   const tx = await gatekeeper.setMaciInstance(await maci.getAddress());
   await tx.wait(1);
+
+  await storage.register({
+    id: EContracts.MACI,
+    // @ts-expect-error expected maci
+    contract: maci,
+    args: [
+      await pollFactory.getAddress(),
+      await messageProcessorFactory.getAddress(),
+      await tallyFactory.getAddress(),
+      await gatekeeper.getAddress(),
+      await initialVoiceCreditProxy.getAddress(),
+      stateTreeDepth,
+      emptyBallotRoots.map((root: bigint) => root.toString()),
+    ],
+    network: hre.network.name,
+  });
 };
 
 export default deployContracts;
