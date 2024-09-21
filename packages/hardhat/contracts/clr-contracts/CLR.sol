@@ -23,7 +23,7 @@ contract CLR {
     // Event when the current version is updated
     event CurrentVersionUpdated(uint256 drnId, string newCurrentVersion);
 
-    // Function to create a new Resource
+    // Function to create a new Resource currently anyone can create
     function createResource(uint256 _drnId, string memory _currentVersion) public {
         require(Resources[_drnId].status == 0, "Resource already exists");
 
@@ -43,10 +43,9 @@ contract CLR {
         return Resources[_drnId].currentVersion;
     }
 
-    // Function to update the proposed version of a Resource
+    // Function to update the proposed version of a Resource, anyone can propose
     function updateProposedVersion(uint256 _drnId, string memory _proposedVersion, address _proposer) public {
         require(Resources[_drnId].status == 2, "Resource already settled");
-        require(msg.sender == Resources[_drnId].coordinator, "Only coordinator can update the proposed version");
 
         Resources[_drnId].proposedVersion = _proposedVersion;
         Resources[_drnId].proposer = _proposer;
