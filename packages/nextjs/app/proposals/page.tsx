@@ -33,7 +33,7 @@ const Proposals: NextPage = () => {
         <h4 className="mt-8 mb-2 font-semibold text-lg">Most viewed proposals today</h4>
         <div className="flex flex-col gap-4">
           {proposal && (
-            <Link href={`/proposal/${proposal[3]}`}>
+            <Link href={`/proposals/${0}`}>
               <div className="border-2 border-emerald-700 p-4 rounded shadow hover:scale-[1.01] transition cursor-pointer ease-in-out">
                 <h5 className="font-semibold text-lg underline">{proposal[3]}</h5>
                 <p className="mb-0">{newText ? `${newText.substring(0, 500)}...` : ""}</p>

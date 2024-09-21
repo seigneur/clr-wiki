@@ -221,13 +221,13 @@ export default function PollDetail({ id }: { id: bigint }) {
   if (error) return <div>Poll not found</div>;
 
   return (
-    <div className="container mx-auto pt-10">
-      <div className="flex h-full flex-col md:w-2/3 lg:w-1/2 mx-auto">
-        <div className="flex flex-row items-center my-5">
+    <div className="container mx-auto">
+      <div className="flex gap-4 mx-auto">
+        {/* <div className="flex flex-row items-center my-5">
           <div className="text-2xl font-bold ">Vote for {poll?.name}</div>
-        </div>
+        </div> */}
         {poll?.options.map((candidate, index) => (
-          <div className="pb-5 flex" key={index}>
+          <div className="" key={index}>
             <VoteCard
               pollOpen={status === PollStatus.OPEN}
               index={index}
@@ -241,15 +241,9 @@ export default function PollDetail({ id }: { id: bigint }) {
           </div>
         ))}
         {status === PollStatus.OPEN && (
-          <div className={`mt-2 shadow-2xl`}>
-            <button
-              onClick={castVote}
-              disabled={!true}
-              className="hover:border-black border-2 border-accent w-full text-lg text-center bg-accent py-3 rounded-xl font-bold"
-            >
-              {true ? "Vote Now" : "Voting Closed"}{" "}
-            </button>
-          </div>
+          <button onClick={castVote} disabled={!true} className="btn btn-primary rounded ml-2 border-emerald-800">
+            {true ? "Vote Now" : "Voting Closed"}{" "}
+          </button>
         )}
 
         {result && (

@@ -57,7 +57,7 @@ const VoteCard = ({ index, candidate, onChange, pollType, isInvalid, setIsInvali
           />
         )}
 
-        <div className={!pollOpen ? "ml-2" : ""}>{candidate}</div>
+        <div className={!pollOpen ? "" : ""}>{candidate}</div>
       </div>
 
       {pollOpen && pollType === PollType.WEIGHTED_MULTIPLE_VOTE && (
