@@ -6,6 +6,39 @@ import { GenericContractsDeclaration } from "../utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
+    CLR: {
+      address: "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
+      abi: [
+        {
+          inputs: [],
+          name: "getIPFSHash",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_ipfsHash",
+              type: "string",
+            },
+          ],
+          name: "setIPFSHash",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deploymentBlockNumber: 28,
+    },
     ConstantInitialVoiceCreditProxy: {
       address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       abi: [
@@ -250,29 +283,6 @@ const deployedContracts = {
               internalType: "uint256",
               name: "_coordinatorPubKeyY",
               type: "uint256",
-            },
-            {
-              components: [
-                {
-                  internalType: "address",
-                  name: "poll",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "messageProcessor",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "tally",
-                  type: "address",
-                },
-              ],
-              indexed: false,
-              internalType: "struct MACI.PollContracts",
-              name: "pollAddr",
-              type: "tuple",
             },
             {
               indexed: false,
@@ -563,30 +573,7 @@ const deployedContracts = {
             },
           ],
           name: "deployPoll",
-          outputs: [
-            {
-              components: [
-                {
-                  internalType: "address",
-                  name: "poll",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "messageProcessor",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "tally",
-                  type: "address",
-                },
-              ],
-              internalType: "struct MACI.PollContracts",
-              name: "pollAddr",
-              type: "tuple",
-            },
-          ],
+          outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
@@ -806,9 +793,26 @@ const deployedContracts = {
           name: "getPoll",
           outputs: [
             {
-              internalType: "address",
-              name: "poll",
-              type: "address",
+              components: [
+                {
+                  internalType: "address",
+                  name: "poll",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "messageProcessor",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "tally",
+                  type: "address",
+                },
+              ],
+              internalType: "struct MACI.PollContracts",
+              name: "pollContracts",
+              type: "tuple",
             },
           ],
           stateMutability: "view",
@@ -1249,7 +1253,17 @@ const deployedContracts = {
           outputs: [
             {
               internalType: "address",
-              name: "",
+              name: "poll",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "messageProcessor",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "tally",
               type: "address",
             },
           ],
@@ -1602,11 +1616,6 @@ const deployedContracts = {
         },
         {
           inputs: [],
-          name: "InvalidMaxValues",
-          type: "error",
-        },
-        {
-          inputs: [],
           name: "MESSAGE_DATA_LENGTH",
           outputs: [
             {
@@ -1624,23 +1633,6 @@ const deployedContracts = {
               internalType: "uint256",
               name: "_duration",
               type: "uint256",
-            },
-            {
-              components: [
-                {
-                  internalType: "uint256",
-                  name: "maxMessages",
-                  type: "uint256",
-                },
-                {
-                  internalType: "uint256",
-                  name: "maxVoteOptions",
-                  type: "uint256",
-                },
-              ],
-              internalType: "struct Params.MaxValues",
-              name: "_maxValues",
-              type: "tuple",
             },
             {
               components: [
@@ -2015,9 +2007,9 @@ const deployedContracts = {
               type: "tuple",
             },
             {
-              internalType: "uint256",
-              name: "input",
-              type: "uint256",
+              internalType: "uint256[]",
+              name: "inputs",
+              type: "uint256[]",
             },
           ],
           name: "verify",
@@ -3296,6 +3288,41 @@ const deployedContracts = {
         },
       ],
       deploymentBlockNumber: 24,
+    },
+  },
+  11155420: {
+    CLR: {
+      address: "0x1EDED83B62Fca2f189dA40f370F0f925B5Ccd005",
+      abi: [
+        {
+          inputs: [],
+          name: "getIPFSHash",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_ipfsHash",
+              type: "string",
+            },
+          ],
+          name: "setIPFSHash",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deploymentBlockNumber: 17539712,
     },
   },
 } as const;
