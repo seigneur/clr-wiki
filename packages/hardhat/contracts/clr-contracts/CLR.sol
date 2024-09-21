@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 contract CLR {
-    uint proposalCount;
+    uint public proposalCount;
 
     struct Resource {
         string dataCID;       // IPFS hash of the current version
