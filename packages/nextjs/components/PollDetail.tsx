@@ -226,20 +226,21 @@ export default function PollDetail({ id }: { id: bigint }) {
         {/* <div className="flex flex-row items-center my-5">
           <div className="text-2xl font-bold ">Vote for {poll?.name}</div>
         </div> */}
-        {poll?.options.map((candidate, index) => (
-          <div className="" key={index}>
-            <VoteCard
-              pollOpen={status === PollStatus.OPEN}
-              index={index}
-              candidate={candidate}
-              clicked={false}
-              pollType={pollType}
-              onChange={(checked, votes) => voteUpdated(index, checked, votes)}
-              isInvalid={Boolean(isVotesInvalid[index])}
-              setIsInvalid={status => setIsVotesInvalid({ ...isVotesInvalid, [index]: status })}
-            />
-          </div>
-        ))}
+        {status === PollStatus.OPEN &&
+          poll?.options.map((candidate, index) => (
+            <div className="" key={index}>
+              <VoteCard
+                pollOpen={status === PollStatus.OPEN}
+                index={index}
+                candidate={candidate}
+                clicked={false}
+                pollType={pollType}
+                onChange={(checked, votes) => voteUpdated(index, checked, votes)}
+                isInvalid={Boolean(isVotesInvalid[index])}
+                setIsInvalid={status => setIsVotesInvalid({ ...isVotesInvalid, [index]: status })}
+              />
+            </div>
+          ))}
         {status === PollStatus.OPEN && (
           <button onClick={castVote} disabled={!true} className="btn btn-primary rounded ml-2 border-emerald-800">
             {true ? "Vote Now" : "Voting Closed"}{" "}
@@ -247,29 +248,22 @@ export default function PollDetail({ id }: { id: bigint }) {
         )}
 
         {result && (
-          <div className="mt-5">
-            <div className="text-2xl font-bold">Results</div>
-            <div className="mt-3">
-              <table className="border-separate w-full mt-7 mb-4">
-                <thead>
-                  <tr className="text-lg font-extralight">
-                    <th className="border border-slate-600 bg-primary">Rank</th>
-                    <th className="border border-slate-600 bg-primary">Candidate</th>
-                    <th className="border border-slate-600 bg-primary">Votes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {result.map((r, i) => (
-                    <tr key={i} className="text-center">
-                      <td>{i + 1}</td>
-                      <td>{r.candidate}</td>
-                      <td>{r.votes}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <table className="table border border-separate rounded border-emerald-700 table-xs">
+            <thead>
+              <tr className="">
+                <th>Decision</th>
+                <th className="">Votes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {result.map((r, i) => (
+                <tr key={i} className="text-center">
+                  <td>{r.candidate}</td>
+                  <td>{r.votes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
       </div>
     </div>
