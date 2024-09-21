@@ -85,7 +85,7 @@ export const Header = () => {
           )}
         </div>
         <Link href="/" passHref className="hidden lg:flex ml-4 mr-8">
-          <h5 className="font-bold text-emerald-600">Cleer</h5>
+          <h5 className="font-serif text-2xl text-emerald-600">Cleer</h5>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
           <HeaderMenuLinks />

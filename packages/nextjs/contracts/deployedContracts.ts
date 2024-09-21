@@ -6,6 +6,39 @@ import { GenericContractsDeclaration } from "../utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
+    CLR: {
+      address: "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
+      abi: [
+        {
+          inputs: [],
+          name: "getIPFSHash",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_ipfsHash",
+              type: "string",
+            },
+          ],
+          name: "setIPFSHash",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deploymentBlockNumber: 28,
+    },
     ConstantInitialVoiceCreditProxy: {
       address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       abi: [
@@ -3255,6 +3288,41 @@ const deployedContracts = {
         },
       ],
       deploymentBlockNumber: 24,
+    },
+  },
+  11155420: {
+    CLR: {
+      address: "0x1EDED83B62Fca2f189dA40f370F0f925B5Ccd005",
+      abi: [
+        {
+          inputs: [],
+          name: "getIPFSHash",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "_ipfsHash",
+              type: "string",
+            },
+          ],
+          name: "setIPFSHash",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deploymentBlockNumber: 17539712,
     },
   },
 } as const;
