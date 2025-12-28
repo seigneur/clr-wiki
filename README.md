@@ -1,138 +1,174 @@
-# Intro
+# Global Tokenization Regulations Map
 
-Wikipedia already has a strong discussion based consensus model for editing information. However, there arises disputes from time to time which are resolved through various means, one such mechanism is dispute resolution noticeboard (DRN).
+An interactive world map for exploring tokenization regulations by country. Click on any country to view detailed information about its regulatory framework for digital assets and tokenization.
 
-Here we present a mechanism to improve upon the existing DRN by use of MACI from ethereum as a collusion resistant voting mechanism to choose a version of the edit. In our POC example we show how this can work.
-
-clr.wiki aims to be a system that can be plugged into wikipedia sort of information boards or can be a wiki standalone by itself.
-
-- [ ] Fork the MACI repo and make it work as is 
-- [ ] Build out the contracts required
-- [ ] Build out the UI required
-- [ ] Build out the NOUNS art UI
-- [ ] See if can integrate phala
-- [ ] Integrate the UI with IPFS for file saving
-- [ ] Integrate the UI with contracts and make the app work
-- [ ] Test out the voting system
-
-# Special Thanks - 
-
-## Scaffold ETH 2 + MACI Voting Template
-
-Welcome to the Scaffold ETH 2 + MACI Voting Template! This template is a powerful starting point for developers aiming to build decentralized voting applications that prioritize privacy and resist collusion. Combining the rapid development environment of Scaffold ETH with the innovative Minimal Anti-Collusion Infrastructure (MACI), this template offers a robust foundation for creating secure and transparent voting systems on the Ethereum blockchain.
+![Tokenization Regulations Map](https://img.shields.io/badge/status-active-brightgreen)
 
 ## Features
 
-- **Voter Registration**: Secure registration process through the MACI contract, enabling eligible voting.
-- **Poll Management**: Admins can easily create and manage polls, including question and options setup.
-- **Secure Voting**: Leverage MACI's privacy-preserving technology to ensure votes are cast anonymously and securely.
-- **Results Display**: Transparent display of poll results after the voting phase concludes.
-- **Admin Dashboard**: Comprehensive admin interface for poll oversight, including current status and results analytics.
+- **Interactive World Map**: Click on countries to explore their tokenization regulations
+- **Comprehensive Data**: Regulatory frameworks, key regulators, and source documents
+- **Automated Updates**: GitHub Actions periodically fetch the latest regulatory information
+- **Color-Coded Status**: Visual indication of regulatory maturity by country
+  - 🟢 **Regulated**: Clear, established regulatory framework
+  - 🟡 **Developing**: Framework under development
+  - ⚫ **Unclear**: Limited or unclear regulatory guidance
+  - 🔴 **Prohibited**: Tokenization activities restricted or prohibited
 
-## Requirements
+## Getting Started
 
-Ensure you have the following tools installed before you proceed:
+### Prerequisites
 
-- [Node (>= v18.17)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+- Node.js 18+ and npm
 
-## Quickstart
-
-Jumpstart your development with these simple steps:
-
-1. **Clone and Set Up the Project**
+### Installation
 
 ```bash
-git clone https://github.com/yashgo0018/maci-wrapper.git
-cd maci-wrapper
-yarn install
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-2. **Download the zkeys for the maci circuits**
+The development server will start at `http://localhost:5173`
 
-In your first terminal window, run:
+## Project Structure
 
-```bash
-yarn download-zkeys
+```
+├── src/
+│   ├── components/
+│   │   ├── WorldMap.tsx          # Interactive map component
+│   │   └── RegulationPanel.tsx   # Country regulation details panel
+│   ├── data/
+│   │   └── regulations.json      # Regulatory data by country
+│   ├── types.ts                  # TypeScript type definitions
+│   ├── App.tsx                   # Main application component
+│   └── main.tsx                  # Application entry point
+├── scripts/
+│   └── fetch-regulations.js      # Automated regulatory data fetcher
+├── .github/
+│   └── workflows/
+│       └── update-regulations.yml # GitHub Action for periodic updates
+└── README.md
 ```
 
-3. **Update the environment variables**
+## Data Structure
 
-Copy the env example files to env files
+Each country's regulatory information is stored in `src/data/regulations.json` with the following structure:
 
-```bash
-cp packages/hardhat/.env.example packages/hardhat/.env
-cp packages/nextjs/.env.example packages/nextjs/.env.local
+```json
+{
+  "SGP": {
+    "countryCode": "SGP",
+    "countryName": "Singapore",
+    "regulatoryStatus": "regulated",
+    "lastUpdated": "2025-12-28",
+    "summary": "Overview of the regulatory framework...",
+    "keyRegulators": ["Monetary Authority of Singapore (MAS)"],
+    "regulations": [
+      {
+        "title": "Payment Services Act 2019",
+        "description": "Description of the regulation...",
+        "effectiveDate": "2020-01-28",
+        "url": "https://www.mas.gov.sg/regulation/acts/payment-services-act"
+      }
+    ],
+    "sources": [
+      {
+        "title": "MAS - Digital Payment Tokens",
+        "url": "https://www.mas.gov.sg/...",
+        "date": "2025-12-28"
+      }
+    ]
+  }
+}
 ```
 
-Update the values of the env variables in these new .env files
+## Adding New Countries
 
-4. **Start a Local Ethereum Network**
+To add a new country's regulatory information:
 
-In your first terminal window, run:
+1. Open `src/data/regulations.json`
+2. Add a new entry using the ISO 3166-1 alpha-3 country code (e.g., "USA", "GBR", "JPN")
+3. Fill in all required fields following the structure above
+4. The country will automatically appear on the map with the appropriate color coding
 
-```bash
-yarn chain
-```
+## Automated Updates
 
-This initiates a local Ethereum network via Hardhat for development and testing purposes. Adjust the network settings in `hardhat.config.ts` as needed.
+The GitHub Action in `.github/workflows/update-regulations.yml` runs weekly (every Monday at 9:00 AM UTC) to check for regulatory updates from:
 
-5. **Deploy Contracts**
+- **Singapore**: Monetary Authority of Singapore (MAS)
+- **United States**: Securities and Exchange Commission (SEC)
+- **Switzerland**: Swiss Financial Market Supervisory Authority (FINMA)
 
-In a second terminal, deploy your test contract with:
+To manually trigger an update:
+1. Go to the "Actions" tab in GitHub
+2. Select "Update Regulatory Data"
+3. Click "Run workflow"
 
-```bash
-yarn deploy
-```
+### Extending the Scraper
 
-Find the contract in `packages/hardhat/contracts`. This script deploys your contract to the local network, with customization available in `packages/hardhat/deploy`.
+To add new regulatory sources, edit `scripts/fetch-regulations.js`:
 
-6. **Launch the NextJS Application**
+1. Add the source to the `SOURCES` object
+2. Implement a fetch function (e.g., `fetchEUUpdates()`)
+3. Add the fetch call in the main `fetchRegulations()` function
 
-In a third terminal, start the NextJS frontend:
+## Tech Stack
 
-```bash
-yarn start
-```
-
-7. **Compute Results**
-
-- In a fourth terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` 
-<<<<<<< HEAD
-- Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/packages/cli`. 
-- Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
-- Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/hardhat/contractAddresses.json maci/packages/cli/build/contractAddresses.json`.  You can also copy the `deployed-contracts.json`file from the maci wrapper repo to the maci repo `cp maci-wrapper/packages/hardhat/deployed-contracts.json maci/packages/contracts/deployed-contracts.json`. 
-- Inside the MACI repo folder, run `cp packages/contracts/deploy-config-example.json packages/contracts/deploy-config.json`
-- After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/quick-start/poll-finalization).
-=======
-- Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/cli`. 
-- Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
-- Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/contractAddresses.json maci/cli/build/contractAddresses.json`. 
-- After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/v1.2/cli).
->>>>>>> e44986c (Initial commit)
-- First merge signups, then merge messages, and then generate proof, and upload the tally.json file which is generated in the process to the admin panel after the poll is over.
-
-Navigate to `http://localhost:3000` to interact with your dApp. Modify your app configuration in `packages/nextjs/scaffold.config.ts` and `packages/hardhat/constants.ts` as necessary.
-
-The deployed contracts will be saved to the file `packages/hardhat/contractAddresses.json`, this file is compatible with maci cli.
-
-The coordinator keys will be stored in the file `packages/hardhat/coordinatorKeyPair.json`.
-
-## Usage
-
-After setting up the project, you can:
-
-- **Register**: Use the app's interface to register with the MACI contract and gain voting rights.
-- **Create Polls**: As an admin, you can create polls with custom questions and options.
-- **Vote**: Registered voters can participate in polls, utilizing MACI's secure voting mechanism.
-- **View Results**: Access poll outcomes after the voting phase ends.
-- **Admin Dashboard**: Monitor and manage ongoing polls, including viewing detailed poll status.
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Map Library**: react-simple-maps
+- **Automation**: GitHub Actions
 
 ## Contributing
 
-Your contributions are welcome! Feel free to report issues, submit fixes, or suggest new features to enhance the project.
+Contributions are welcome! To contribute regulatory data:
+
+1. Fork the repository
+2. Add or update regulatory information in `src/data/regulations.json`
+3. Include credible sources for all information
+4. Submit a pull request
+
+Please ensure all regulatory information:
+- Is accurate and up-to-date
+- Includes proper source citations
+- Follows the established data structure
+- Uses official regulatory body documentation
+
+## Data Sources
+
+Current regulatory information is sourced from:
+
+- **Singapore**: [Monetary Authority of Singapore](https://www.mas.gov.sg)
+- **United States**: [SEC](https://www.sec.gov/digital-assets), [CFTC](https://www.cftc.gov/digitalassets)
+- **Switzerland**: [FINMA](https://www.finma.ch)
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
+
+## Disclaimer
+
+This tool provides general information about tokenization regulations and should not be considered legal advice. Always consult with qualified legal professionals for specific regulatory compliance questions.
+
+Regulatory frameworks are subject to change. While we strive to keep information current through automated updates, users should verify information with official regulatory sources.
+
+## Roadmap
+
+- [ ] Add more countries (EU, UK, UAE, Hong Kong, Japan, etc.)
+- [ ] Implement real-time web scraping for regulatory updates
+- [ ] Add search and filter functionality
+- [ ] Include regulatory comparison features
+- [ ] Add RSS feeds for regulatory changes
+- [ ] Mobile-responsive enhancements
+- [ ] Multi-language support
+
+## Contact
+
+For questions or suggestions, please open an issue on GitHub.
