@@ -19,19 +19,19 @@ An interactive world map for exploring tokenization regulations by country. Clic
 
 ### Prerequisites
 
-- Node.js 18+ and npm
+- Node.js 18+ and Yarn
 
 ### Installation
 
 ```bash
 # Install dependencies
-npm install
+yarn install
 
 # Run development server
-npm run dev
+yarn dev
 
 # Build for production
-npm run build
+yarn build
 ```
 
 The development server will start at `http://localhost:5173`

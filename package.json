@@ -1,7 +1,8 @@
 {
-  "name": "tokenization-regulations-map",
+  "name": "clr-tokenization-regulations-map",
   "version": "1.0.0",
   "type": "module",
+  "description": "Interactive world map showing tokenization regulations across different jurisdictions",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
