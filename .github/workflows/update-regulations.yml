@@ -1,0 +1,44 @@
+name: Update Regulatory Data
+
+on:
+  schedule:
+    # Run every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-regulations:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm install cheerio node-fetch@2
+
+      - name: Run regulation scraper
+        run: |
+          node scripts/fetch-regulations.js
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code src/data/regulations/ || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/regulations/
+          git commit -m "Update regulatory data - $(date +'%Y-%m-%d')"
+          git push

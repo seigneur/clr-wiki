@@ -1,0 +1,126 @@
+{
+  "SGP": {
+    "countryCode": "SGP",
+    "countryName": "Singapore",
+    "regulatoryStatus": "regulated",
+    "lastUpdated": "2025-12-28",
+    "summary": "Singapore has established a comprehensive regulatory framework for digital payment tokens and tokenization activities. The Monetary Authority of Singapore (MAS) regulates digital payment token services under the Payment Services Act 2019 and has issued guidelines for tokenization of assets including securities and real estate.",
+    "keyRegulators": [
+      "Monetary Authority of Singapore (MAS)",
+      "Accounting and Corporate Regulatory Authority (ACRA)"
+    ],
+    "regulations": [
+      {
+        "title": "Payment Services Act 2019",
+        "description": "Establishes the regulatory framework for digital payment token (DPT) service providers. DPT service providers must obtain a license from MAS and comply with AML/CFT requirements.",
+        "effectiveDate": "2020-01-28",
+        "url": "https://www.mas.gov.sg/regulation/acts/payment-services-act"
+      },
+      {
+        "title": "MAS Guidelines on Provision of Digital Payment Token Services",
+        "description": "Provides guidance on the regulatory requirements for DPT service providers, including custody, security, and consumer protection measures.",
+        "effectiveDate": "2020-01-28",
+        "url": "https://www.mas.gov.sg/regulation/guidelines"
+      },
+      {
+        "title": "Project Guardian - Asset Tokenization",
+        "description": "Industry pilot exploring applications of asset tokenization and DeFi in wholesale funding markets. Focuses on tokenization of bonds, deposits, and foreign exchange.",
+        "effectiveDate": "2022-05-01",
+        "url": "https://www.mas.gov.sg/schemes-and-initiatives/project-guardian"
+      },
+      {
+        "title": "Variable Capital Companies (VCC) Framework",
+        "description": "Enables fund managers to tokenize fund units and establish digital asset funds in Singapore.",
+        "effectiveDate": "2020-01-14",
+        "url": "https://www.mas.gov.sg/schemes-and-initiatives/vcc"
+      }
+    ],
+    "sources": [
+      {
+        "title": "MAS - Digital Payment Tokens",
+        "url": "https://www.mas.gov.sg/regulation/explainers/digital-payment-tokens",
+        "date": "2025-12-28"
+      },
+      {
+        "title": "MAS - Project Guardian",
+        "url": "https://www.mas.gov.sg/schemes-and-initiatives/project-guardian",
+        "date": "2025-12-28"
+      },
+      {
+        "title": "Payment Services Act 2019",
+        "url": "https://sso.agc.gov.sg/Act/PSA2019",
+        "date": "2025-12-28"
+      }
+    ]
+  },
+  "USA": {
+    "countryCode": "USA",
+    "countryName": "United States",
+    "regulatoryStatus": "developing",
+    "lastUpdated": "2025-12-28",
+    "summary": "The United States has a complex regulatory landscape for tokenization with multiple regulators involved. The SEC regulates security tokens, the CFTC oversees commodity tokens, and various banking regulators are developing frameworks for tokenized deposits and assets.",
+    "keyRegulators": [
+      "Securities and Exchange Commission (SEC)",
+      "Commodity Futures Trading Commission (CFTC)",
+      "Office of the Comptroller of the Currency (OCC)",
+      "Federal Reserve"
+    ],
+    "regulations": [
+      {
+        "title": "SEC Framework for Investment Contract Analysis of Digital Assets",
+        "description": "Provides guidance on when a digital asset is considered a security and subject to federal securities laws.",
+        "effectiveDate": "2019-04-03",
+        "url": "https://www.sec.gov/corpfin/framework-investment-contract-analysis-digital-assets"
+      },
+      {
+        "title": "Regulation A+ for Security Token Offerings",
+        "description": "Allows companies to offer and sell securities (including tokenized securities) with reduced regulatory requirements compared to traditional IPOs.",
+        "effectiveDate": "2015-06-19",
+        "url": "https://www.sec.gov/education/capitalraising/building-blocks/regulation-a-plus"
+      }
+    ],
+    "sources": [
+      {
+        "title": "SEC - Digital Assets",
+        "url": "https://www.sec.gov/digital-assets",
+        "date": "2025-12-28"
+      },
+      {
+        "title": "CFTC - Digital Assets",
+        "url": "https://www.cftc.gov/digitalassets",
+        "date": "2025-12-28"
+      }
+    ]
+  },
+  "CHE": {
+    "countryCode": "CHE",
+    "countryName": "Switzerland",
+    "regulatoryStatus": "regulated",
+    "lastUpdated": "2025-12-28",
+    "summary": "Switzerland has established itself as a crypto-friendly jurisdiction with clear regulations for tokenization. The DLT Act provides legal certainty for tokenized assets and enables the creation of DLT securities.",
+    "keyRegulators": [
+      "Swiss Financial Market Supervisory Authority (FINMA)"
+    ],
+    "regulations": [
+      {
+        "title": "DLT Act (Federal Act on the Adaptation of Federal Law to Developments in Distributed Ledger Technology)",
+        "description": "Establishes the legal framework for tokenized securities (DLT securities) and enables their trading and custody.",
+        "effectiveDate": "2021-08-01",
+        "url": "https://www.finma.ch/en/finma/finma-dlt-legislation/"
+      },
+      {
+        "title": "FINMA ICO Guidelines",
+        "description": "Provides guidance on the regulatory treatment of initial coin offerings and token classifications.",
+        "effectiveDate": "2018-02-16",
+        "url": "https://www.finma.ch/en/news/2018/02/20180216-mm-ico-wegleitung/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "FINMA - DLT Legislation",
+        "url": "https://www.finma.ch/en/finma/finma-dlt-legislation/",
+        "date": "2025-12-28"
+      }
+    ]
+  }
+}
